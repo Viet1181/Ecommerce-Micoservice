@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Microservice - Dự án E-Commerce</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #ff8833;
+            color: white;
+            padding: 30px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+        }
+        h2 {
+            color: #ff8833;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+        .card {
+            border: 1px solid #e5e7ea;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00b517;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .button {
+            display: inline-block;
+            background-color: #ff8833;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #e67422;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ecommerce Microservice</h1>
+        <p>Dự án E-Commerce hoàn chỉnh xây dựng trên Springboot</p>
+    </header>
+
+    <section>
+        <h2>Tổng quan</h2>
+        <p>
+            Đây là một dự án E-Commerce hoàn chỉnh được xây dựng trên framework Springboot, 
+            cung cấp tất cả các tính năng cần thiết cho một trang web thương mại điện tử và hệ thống quản lý.
+        </p>
+        <a href="https://github.com/Viet1181/Ecommerce-Micoservice" class="button">Xem trên GitHub</a>
+    </section>
+
+    <h2>Kiến trúc và Công nghệ</h2>
+    <div class="container">
+        <div class="card">
+            <h3>Kiến trúc</h3>
+            <ul class="feature-list">
+                <li>Kiến trúc Microservice</li>
+                <li>RESTful APIs</li>
+                <li>Service Discovery</li>
+                <li>API Gateway</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Backend</h3>
+            <ul class="feature-list">
+                <li>Spring Boot</li>
+                <li>Spring Data</li>
+                <li>Spring Security</li>
+                <li>Eureka Server</li>
+                <li>Spring Cloud Gateway</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Cơ sở dữ liệu & Bộ nhớ đệm</h3>
+            <ul class="feature-list">
+                <li>MySQL</li>
+                <li>Hibernate</li>
+                <li>Redis</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Bảo mật</h3>
+            <ul class="feature-list">
+                <li>JWT Authentication</li>
+                <li>Role-based Authorization</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Cấu trúc dự án</h2>
+    <div class="card">
+        <ul class="feature-list">
+            <li><strong>api-gateway:</strong> Điểm vào chính cho tất cả các requests từ client</li>
+            <li><strong>eureka-server:</strong> Service discovery cho hệ thống microservices</li>
+            <li><strong>user-service:</strong> Quản lý người dùng và xác thực</li>
+            <li><strong>product-catalog-service:</strong> Quản lý danh mục sản phẩm</li>
+            <li><strong>order-service:</strong> Xử lý và quản lý đơn hàng</li>
+            <li><strong>product-recommendation-service:</strong> Cung cấp đề xuất sản phẩm</li>
+            <li><strong>frontend:</strong> Giao diện người dùng</li>
+        </ul>
+    </div>
+
+    <h2>Cài đặt và chạy dự án</h2>
+    <div class="card">
+        <h3>Yêu cầu</h3>
+        <ul class="feature-list">
+            <li>Java 11 hoặc cao hơn</li>
+            <li>Maven</li>
+            <li>MySQL</li>
+            <li>Redis (tùy chọn)</li>
+            <li>Node.js và npm (cho frontend)</li>
+        </ul>
+
+        <h3>Cách chạy</h3>
+        <ol>
+            <li>Clone repository: <code>git clone https://github.com/Viet1181/Ecommerce-Micoservice.git</code></li>
+            <li>Cấu hình cơ sở dữ liệu MySQL trong các file application.properties của mỗi service</li>
+            <li>Khởi động eureka-server trước</li>
+            <li>Khởi động các services khác</li>
+            <li>Khởi động api-gateway</li>
+            <li>Cài đặt và chạy frontend</li>
+        </ol>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 NguyenQuocViet. MIT License.</p>
+    </footer>
+</body>
+</html>
